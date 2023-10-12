@@ -5,24 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A page dedicated to learning the bootstrap framework">
     <meta property="og-description" content="A page dedicated to learning the bootstrap framework">
-    <meta property="twotter-description" content="A page dedicated to learning the bootstrap framework">
+    <meta property="twitter-description" content="A page dedicated to learning the bootstrap framework">
+    <script src="https://kit.fontawesome.com/cd6beb0eaf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Bootstrap</title>
 </head>
 <body>
-    <nav class=".navbar .navbar-expand-xl bg-light">
+
+ <!--- HEADER -->   
+    <nav class="navbar navbar-expand-sm bg-dark navbar-light">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Creature</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Sorcery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Instant</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Enchantments</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-secondary fs-3 text-danger" href="#">Creature</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-secondary fs-3 text-danger" href="#">Sorcery</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-secondary fs-3 text-danger" href="#">Instant</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-secondary fs-3 text-danger" href="#">Enchantments</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle btn btn-secondary fs-3 text-danger" href="#" role="button" data-bs-toggle="dropdown">
+                    Lands</a>
+                    <ul class="dropdown-menu bg-light">
+                        <li><a class="dropdown-item btn btn-outline-dark fs-4 text-danger" href="#">Plains</a></li>
+                        <li><a class="dropdown-item btn btn-outline-dark fs-4 text-danger" href="#">Island</a></li>
+                        <li><a class="dropdown-item btn btn-outline-dark fs-4 text-danger" href="#">Swamp</a></li>
+                        <li><a class="dropdown-item btn btn-outline-dark fs-4 text-danger" href="#">Mountain</a></li>
+                        <li><a class="dropdown-item btn btn-outline-dark fs-4 text-danger" href="#">Forest</a></li>
+                    </ul>
+                </li>
         </ul>
     </nav>
-    
+
+<!--- MAIN -->
+    <main>
+        <!-- LOGO -->
+        <div class="container-fluid bg-light p-5 d-flex justify-content-center">
+                <img src="/img/mtg_logo_medium.png" alt="magic the gathering logo" class="rounded text-center">
+        </div>
+        <!-- ACCORDION -->
+        <div class="container-fluid bg-light p-5">
+            <div id="accordionExample" class="accordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"> 
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How to play
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae alias quos suscipit qui odit soluta rerum consequuntur iste iure blanditiis enim consequatur obcaecati, natus maiores numquam quia odio id in.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Ways to play
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="accordionExample">
+                        <div class="accordion-body">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, fuga voluptas aliquid corporis earum ad? Earum, amet itaque at mollitia impedit modi neque, officiis aperiam minus alias atque cum magnam.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- CAROUSEL -->
+        <div class="container-fluid bg-light p-5 d-flex justify-content-center">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/cards/mtg_card_1.jpeg" alt="Blue Enchant Creature card" class="d-block w-45">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/cards/mtg_card_2.jpeg" alt="White Creature card" class="d-block w-45">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/cards/mtg_card_3.jpeg" alt="Black Instant card" class="d-block w-45">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/cards/mtg_card_4.jpeg" alt="Red Summon card" class="d-block w-45">
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+ <!--- FOOTER --> 
+    <div class="container-fluid bg-dark pt-2 pb-2">
+        <div class="row">
+            <div class="container-md col mt-3">
+                <p class="h5 text-danger mt-3 text-center">Subscribe for newsletter</p>
+                <div class="container d-flex justify-content-center align-content-center ">
+                    <form name="footer-form" action="#">
+                            <input type="text" id="name" class="form-control" placeholder="Enter name" name="name">
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            <button type="button" class="btn btn-light btn-sm">Submit</button>
+                    </form>
+                </div>
+            </div>
 
 
+            <div class="container-md col mt-3">
+                <p class="h5 text-danger mt-3 text-center">Want to learn more?</p>
 
+                <div class="container d-flex justify-content-center align-content-center">
+                    <div><a href="https://company.wizards.com/en" class="icon-link icon-link-hover text-center link-light">
+                        <i class="fa-solid fa-hat-wizard fs-1 p-4"></i>
+                    </a></div>
+                    <div><a href="https://mtg.fandom.com/wiki/Main_Page" class="icon-link icon-link-hover text-center link-light">
+                        <i class="fa-solid fa-wand-magic-sparkles fs-1 p-4"></i>
+                    </a></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
